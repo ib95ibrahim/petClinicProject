@@ -2,10 +2,12 @@ package petclinicproject.springdemo.services.map;
 
 import petclinicproject.springdemo.model.Vet;
 import petclinicproject.springdemo.services.CrudService;
+import petclinicproject.springdemo.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
@@ -14,12 +16,12 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudS
 
     @Override
     public void deleteById(Long id) {
-         super.deleteById(id);
+        super.deleteById(id);
     }
 
     @Override
     public void delete(Vet object) {
-      super.delete(object);
+        super.delete(object);
     }
 
     @Override
